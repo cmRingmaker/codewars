@@ -9,7 +9,7 @@ function plural(n) {
 }
 */
 
-// My Solution
+// My Solution:
 function plural(n) {
     return !(n === 1);
 }
