@@ -5,7 +5,6 @@ Return True if yes, False otherwise :)
 function hero(bullets, dragons){
 //Get Coding!
 }
-
 */
 
 // My Solution:
