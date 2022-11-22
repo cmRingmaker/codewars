@@ -1,0 +1,7 @@
+/*Now you have to write a function that takes an argument and returns the square of it.
+
+// Write the "square"-function here
+*/
+
+// My Solution:
+const square = n => n ** 2
