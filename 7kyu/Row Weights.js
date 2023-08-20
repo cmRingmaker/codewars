@@ -19,19 +19,16 @@ function rowWeights(array){
 // My Solution:
 
 function rowWeights(array){
-  const team1 = []
-  const team2 = []
+  let team1 = 0
+  let team2 = 0
   
   for(let i = 0; i < array.length; i++) {
     if(i % 2 === 0) {
-      team1.push(array[i])
+      team1 += array[i]
     } else {
-      team2.push(array[i])
+      team2 += array[i]
     }
   }
   
-  const team1weight = team1.reduce((acc, c) => acc + c, 0)
-  const team2weight = team2.reduce((acc, c) => acc + c, 0)
-  
-  return [team1weight, team2weight]
+  return [team1, team2]
 }
