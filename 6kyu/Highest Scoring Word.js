@@ -16,19 +16,27 @@ All letters will be lowercase and all inputs will be valid.
 // My Solution:
 
 function high(x){
-  var words = x.split(' '),
-      mx = 0,
-      res = ''
-  for(let i = 0; i < words.length; i++){
-    var s = words[i],
-        val = 0
-    for(let j = 0; j < s.length; j++){
-      val += (s.charCodeAt(j) - 96)
+  let alphabet = [
+    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+    'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+  ];
+  
+  let words = x.split(" ")
+  let highestScore = 0
+  let highestScoreWord = ""
+  
+  for (let word of words) {
+    let lettersSum = 0
+    
+    for (let letter of word) {
+      lettersSum += alphabet.indexOf(letter) + 1;
     }
-    if(val > mx){
-      mx = val
-      res = s
+    
+    if (lettersSum > highestScore) {
+      highestScore = lettersSum
+      highestScoreWord = word
     }
   }
-  return res
+  
+  return highestScoreWord
 }
