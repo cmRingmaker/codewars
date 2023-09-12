@@ -24,7 +24,7 @@ function mxdiflg(a1, a2) {
 // Find maximum and minimum in both arrays
 // Compare maximum from array1 with minimum of array2
 // Compare maximum from array2 with minimum of array1
-// Return the maximum from botrh comparisions
+// Return the maximum from both comparisions
 // -----------------------------------------------------------------
 
 function mxdiflg(a1, a2) {
