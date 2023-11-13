@@ -9,14 +9,5 @@ function rot13(message){
 
 
 // My Solution:
-function lowercaseCount(str){
-  let res = 0
-  
-  for(let i = 0; i < str.length; i++) {
-    if(str[i].match(/[a-z]/)) {
-      res++
-    }
-  }
-  
-  return res
-}
+
+const lowercaseCount = str => (str.match(/[a-z]/g) || []).length
