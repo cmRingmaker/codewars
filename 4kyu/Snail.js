@@ -20,18 +20,26 @@ snail = function(array) {
 
 // My Solution:
 
-const snail = (array) =>{
-  let finalArray = []
+const snail = (array) => {
+  let res = []
 
   while(array.length){
-    finalArray.push(...array.shift())
+
+    // right
+    res.push(...array.shift())
+
+    // down
     for (var i = 0; i < array.length; i++){
-      finalArray.push(array[i].pop())
+      res.push(array[i].pop())
     }
-    finalArray.push(...(array.pop() || []).reverse())
+
+    // left
+    res.push(...(array.pop() || []).reverse())
+
+    // up
     for (var i = array.length -1; i >= 0; i--){
-      finalArray.push(array[i].shift())
+      res.push(array[i].shift())
     }
   }
-  return finalArray
+  return res
 }
