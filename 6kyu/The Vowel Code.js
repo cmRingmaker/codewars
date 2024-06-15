@@ -20,8 +20,6 @@ function encode(string) {
 
 function decode(string) {
   return
-}function frogContest(n) {
-  //Code here
 }
 */
 
